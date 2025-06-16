@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madratus Sunnah</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Font Family Tiro Bangla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-teal-700 text-white text-sm hidden md:block">
+      <div class="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
+        <div class="container mx-auto flex justify-center items-center space-x-[1.5rem]">
+          <div class="flex items-center gap-2">
+            <i data-feather="mail" class="h-4 w-4"></i>
+            <span class="flex items-center gap-1"> info@madrasatussunnah.org </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-feather="phone" class="h-4 w-4"></i>
+            <span class="flex items-center gap-1"> +880 9639 151525 </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-feather="map-pin" class="h-4 w-4"></i>
+            <span class="flex items-center gap-1"> স্থায়ী কার্যালয়: মাদরাসাতুস সুন্নাহ, সাতারকুল, বাড্ডা, ঢাকা। </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Nav -->
+    <nav class="bg-white shadow-sm">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="assets/madrasatus-sunnah-logo.svg" alt="Logo" class="h-10 w-auto" />
+        </div>
+
+        <div>
+          <!-- Navigation Links -->
+          <div class="hidden md:flex items-center gap-5 text-gray-700 font-medium">
+            <a href="#" class="hover:text-teal-600">হোম</a>
+            <a href="#" class="hover:text-teal-600">গ্যালারি</a>
+            <a href="#" class="hover:text-teal-600">নোটিশ</a>
+            <a href="#" class="hover:text-teal-600">সুবিধা</a>
+            <a href="#" class="hover:text-teal-600">শাখা</a>
+            <a href="#" class="hover:text-teal-600">একাডেমিক</a>
+            <a href="#" class="hover:text-teal-600">এডমিশন</a>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="hidden md:block">
+            <a href="#" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-[0.4rem] leading-[1.1] rounded-md transition inline-block"> প্রি-এডমিশন </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden">
+          <button id="menuToggle" class="text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-white text-gray-700 font-medium">
+        <a href="#" class="block hover:text-teal-600">হোম</a>
+        <a href="#" class="block hover:text-teal-600">গ্যালারি</a>
+        <a href="#" class="block hover:text-teal-600">নোটিশ</a>
+        <a href="#" class="block hover:text-teal-600">সুবিধা</a>
+        <a href="#" class="block hover:text-teal-600">শাখা</a>
+        <a href="#" class="block hover:text-teal-600">একাডেমিক</a>
+        <a href="#" class="block hover:text-teal-600">এডমিশন</a>
+        <a href="#" class="block text-white bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-md w-fit">প্রি-এডমিশন</a>
+      </div>
+    </nav>
+
+    <section class="bg-[#FFF7ED] py-16">
+      <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
+        <!-- Text Content -->
+        <div class="lg:w-1/2 space-y-4 text-center lg:text-left">
+          <h1 class="text-2xl font-semibold text-gray-800">মাদরাসাতুস সুন্নাহ</h1>
+          <h2 class="text-4xl md:text-5xl font-bold text-orange-500 leading-tight">ইলমে দ্বীন শিক্ষার ইনস্টিটিউট</h2>
+          <p class="text-gray-700 text-base md:text-lg">সকল প্রশংসা আল্লাহর। অব্যাহত শান্তি বর্ষিত হোক প্রিয়নবী মুহাম্মদ ﷺ (সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম)-এর প্রতি।</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#" class="bg-teal-600 text-white px-6 py-3 rounded-md hover:bg-teal-700 transition"> কোর্স সম্পর্কে জানুন </a>
+            <a href="#" class="border border-gray-400 text-gray-700 px-6 py-3 rounded-md hover:bg-gray-100 transition"> ভর্তি তথ্য জানুন </a>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="lg:w-1/2 mt-10 lg:mt-0">
+          <img src="assets/hero_image.svg" alt="Teacher and student illustration" class="w-full max-w-md mx-auto" />
+        </div>
+      </div>
+    </section>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
