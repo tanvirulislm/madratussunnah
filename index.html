@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="bg-teal-700 text-white text-sm hidden md:block">
-      <div class="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
         <div class="container mx-auto flex justify-center items-center space-x-[1.5rem]">
           <div class="flex items-center gap-2">
             <i data-feather="mail" class="h-4 w-4"></i>
@@ -35,52 +35,97 @@
     <!-- Main Nav -->
     <nav class="bg-white shadow-sm">
       <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <!-- Logo -->
         <div class="flex items-center gap-2">
-          <img src="assets/madrasatus-sunnah-logo.svg" alt="Logo" class="h-10 w-auto" />
+          <img src="assets/madrasatus-sunnah-logo.svg" alt="Logo" class="h-[3.5rem] w-auto" />
         </div>
 
-        <div>
-          <!-- Navigation Links -->
-          <div class="hidden md:flex items-center gap-5 text-gray-700 font-medium">
-            <a href="#" class="hover:text-teal-600">হোম</a>
-            <a href="#" class="hover:text-teal-600">গ্যালারি</a>
-            <a href="#" class="hover:text-teal-600">নোটিশ</a>
-            <a href="#" class="hover:text-teal-600">সুবিধা</a>
-            <a href="#" class="hover:text-teal-600">শাখা</a>
-            <a href="#" class="hover:text-teal-600">একাডেমিক</a>
-            <a href="#" class="hover:text-teal-600">এডমিশন</a>
+        <div class="hidden md:flex items-center gap-5 text-gray-700 font-medium">
+          <a href="#" class="text-teal-600 hover:text-teal-600">হোম</a>
+          <a href="#" class="hover:text-teal-600">গ্যালারি</a>
+          <a href="#" class="hover:text-teal-600">নোটিশ</a>
+          <a href="#" class="hover:text-teal-600">সুবিধা</a>
+
+          <div class="relative group">
+            <a href="#" class="hover:text-teal-600 inline-flex items-center">
+              শাখা
+              <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
+            </a>
+            <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">ঢাকা শাখা</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">চট্টগ্রাম শাখা</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">সিলেট শাখা</a>
+            </div>
           </div>
 
-          <!-- CTA Button -->
-          <div class="hidden md:block">
-            <a href="#" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-[0.4rem] leading-[1.1] rounded-md transition inline-block"> প্রি-এডমিশন </a>
+          <div class="relative group">
+            <a href="#" class="hover:text-teal-600 inline-flex items-center">
+              একাডেমিক
+              <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
+            </a>
+            <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+            </div>
           </div>
+
+          <a href="#" class="hover:text-teal-600">এডমিশন</a>
+
+          <a href="#" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-[0.4rem] leading-[1.1] rounded-md transition inline-block ml-4"> প্রি-এডমিশন </a>
         </div>
 
-        <!-- Mobile Menu Icon -->
         <div class="md:hidden">
           <button id="menuToggle" class="text-gray-700 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Dropdown Menu -->
       <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-white text-gray-700 font-medium">
         <a href="#" class="block hover:text-teal-600">হোম</a>
         <a href="#" class="block hover:text-teal-600">গ্যালারি</a>
         <a href="#" class="block hover:text-teal-600">নোটিশ</a>
         <a href="#" class="block hover:text-teal-600">সুবিধা</a>
-        <a href="#" class="block hover:text-teal-600">শাখা</a>
-        <a href="#" class="block hover:text-teal-600">একাডেমিক</a>
+
+        <div>
+          <button class="flex justify-between items-center w-full text-left hover:text-teal-600 py-2" id="mobileShakhaToggle">
+            শাখা
+            <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" id="mobileShakhaArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="mobileShakhaSubmenu" class="hidden pl-4 space-y-2">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ঢাকা শাখা</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">চট্টগ্রাম শাখা</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">সিলেট শাখা</a>
+          </div>
+        </div>
+
+        <div>
+          <button class="flex justify-between items-center w-full text-left hover:text-teal-600 py-2" id="mobileAcademicToggle">
+            একাডেমিক
+            <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" id="mobileAcademicArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="mobileAcademicSubmenu" class="hidden pl-4 space-y-2">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+          </div>
+        </div>
+
         <a href="#" class="block hover:text-teal-600">এডমিশন</a>
         <a href="#" class="block text-white bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-md w-fit">প্রি-এডমিশন</a>
       </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="bg-[#FFF7ED] py-16">
       <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
         <!-- Text Content -->
@@ -100,6 +145,67 @@
         </div>
       </div>
     </section>
+
+    <!-- About Us Section -->
+    <section>
+      <div class="container mx-auto px-4 py-16">
+        <img src="assets/madrasatus-sunnah-logo.svg" alt="" class="h-[4.5rem] w-auto mx-auto mb-8" />
+        <h2 class="text-3xl font-bold text-center mb-6">মাদরাসাতুস সুন্নাহ কী ও কেন?</h2>
+        <p class="text-gray-700 text-lg leading-relaxed text-center mx-auto px-[6rem]">
+          সমাজে বিদ্যমান বিভিন্ন শিক্ষাধারার মধ্যে মাদরাসা শিক্ষাধারা সুপ্রাচীন এবং কল্যাণমুখী শিক্ষার ধারক হিসেবে সুবিদিত। এই শিক্ষাধারা ইসলামী জীবন—দর্শনের আলোকে উপমহাদেশে গড়ে তুলছে পরকালমুখী মূল্যবোধসম্পন্ন আদর্শ মানুষ। কিন্তু এই শিক্ষাধারা নৈতিকতা ও মূল্যবোধের মানদন্ডে উত্তীর্ণ একদল আদর্শ মানুষ
+          ও দক্ষ আলেম তৈরিতে সফল হলেও এর দ্বারা সময়োপযোগী ও সৃজনশীল মানুষ সেভাবে তৈরি হচ্ছে না। পক্ষান্তরে প্রচলিত সাধারণ শিক্ষাধারা আমাদের সন্তানদের পার্থিব শিক্ষায় শিক্ষিত করছে বটে, কিন্তু এই মাধ্যমে নৈতিকতা এবং প্রকৃত জীবনবোধসম্পন্ন মানুষ গড়ে উঠছে না। এজন্য আমরা মনে করছি এরকম একটি
+          শিক্ষাপ্রতিষ্ঠান দরকার যেটি উন্নত চরিত্রসমৃদ্ধ কুরআন—সুন্নাহর গভীর জ্ঞানসম্পন্ন আলেম তৈরি করবে, যারা জাগতিক জ্ঞান—বিজ্ঞানেও প্রয়োজনীয় ধারণা রাখবে। এই লক্ষ্য বাস্তবায়নেই মাদরাসাতুস সুন্নাহর অভিযাত্রা।
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">কেন আমাদেরকে দ্বীন শিক্ষার সহযোগী নিবেন?</h2>
+          <p class="text-lg text-gray-600">আমাদের মাদ্রাসার এই নিজস্ব প্রধান বৈশিষ্ট্য ছাড়াও আরো অন্যান্য বৈশিষ্ট্য রয়েছে।</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          <div class="bg-white">
+            <div class="text-6xl font-extrabold text-gray-300 mb-4">০১</div>
+            <h3 class="text-xl font-semibold text-gray-700 mb-9">হিফজুল কুরআন</h3>
+            <p class="text-gray-600 mb-4">কুরআন ও সুন্নাহর মূল্য (মূলপাঠ) আয়ত্ত করা ছাড়া দ্বীন আসলে অসম্পূর্ণ। একজন হাফেজকে মালবাক্যনুল কুরআন সুন্নাহর বিরেধবাসের মৌলিক পাঠ হিসাবে...</p>
+            <a href="#" class="text-teal-700 underline">আরও দেখুন</a>
+          </div>
+
+          <div class="bg-white">
+            <div class="text-6xl font-extrabold text-gray-300 mb-4">০২</div>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">আরবি, ইংরেজি ও বাংলা ভাষায় দক্ষতা</h3>
+            <p class="text-gray-600 mb-4">ভাষাগুলো সম্পর্কে সচেতনতা ও ইফেক্টিভ ব্যবহারের জন্য ভাষা-দক্ষতা অত্যন্ত গুরুত্বপূর্ণ। অন্যান্য মাদ্রাসাসুল কুরআন শিক্ষার্থীদের ভাষা-দক্ষতা বিশেষভাবে...</p>
+            <a href="#" class="text-teal-700 underline">আরও দেখুন</a>
+          </div>
+
+          <div class="bg-white">
+            <div class="text-6xl font-extrabold text-gray-300 mb-4">০৩</div>
+            <h3 class="text-xl font-semibold text-gray-700 mb-9">আখলাক ও মূল্যবোধ</h3>
+            <p class="text-gray-600 mb-4">ইসলামের মৌলিক শিক্ষাসমূহের অন্যতম হলো অর্জিত জ্ঞান অনুযায়ী আমলি জীবন গড়ে তোলা, শিষ্টাচার ও মূল্যবোধ লালন করা। দুঃখজনকভাবে এ বিষয়গুলো...</p>
+            <a href="#" class="text-teal-700 underline">আরও দেখুন</a>
+          </div>
+
+          <div class="bg-white">
+            <div class="text-6xl font-extrabold text-gray-300 mb-4">০৪</div>
+            <h3 class="text-xl font-semibold text-gray-700 mb-9">অভিভাবক নাসীহা প্রোগ্রাম</h3>
+            <p class="text-gray-600 mb-4">একজন শিক্ষার্থীর শিক্ষাগত যোগ্যতা এবং চারিত্রিক মানোন্নয়ন শিক্ষক-অভিভাবকের সম্মিলিত প্রচেষ্টা ব্যতীত সম্ভব নয়। তাই মাদরাসাতুস সুন্নাহ কিছু দিন অন্তর...</p>
+            <a href="#" class="text-teal-700 underline">আরও দেখুন</a>
+          </div>
+
+          <div class="bg-white">
+            <div class="text-6xl font-extrabold text-gray-300 mb-4">০৫</div>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">অভিভাবকদের দীনি শিক্ষা সংক্রান্ত কার্যক্রম</h3>
+            <p class="text-gray-600 mb-4">সন্তান মা-বাবার নিকট আল্লাহ তাআলার পক্ষ থেকে আমানত। শিশুর প্রথম পাঠশালা হচ্ছে মায়ের কোল। এখানে সে জীবনের অনেক কিছু শেখে। পরবর্তীতে এটাই তার...</p>
+            <a href="#" class="text-teal-700 underline">আরও দেখুন</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Scripts -->
     <script src="script.js"></script>
   </body>
