@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madratus Sunnah</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Font Family Tiro Bangla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-teal-700 text-white text-sm hidden md:block">
+      <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
+        <div class="container mx-auto flex justify-center items-center space-x-[1.5rem]">
+          <div class="flex items-center gap-2">
+            <i data-feather="mail" class="h-4 w-4"></i>
+            <span class="flex items-center gap-1"> info@madrasatussunnah.org </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-feather="phone" class="h-4 w-4"></i>
+            <span class="flex items-center gap-1"> +880 9639 151525 </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-feather="map-pin" class="h-4 w-4"></i>
+            <span class="flex items-center gap-1"> স্থায়ী কার্যালয়: মাদরাসাতুস সুন্নাহ, সাতারকুল, বাড্ডা, ঢাকা। </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Nav -->
+    <nav class="bg-white shadow-sm">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <img src="assets/madrasatus-sunnah-logo.svg" alt="Logo" class="h-[3.5rem] w-auto" />
+        </div>
+
+        <div class="hidden md:flex items-center gap-5 text-gray-700 font-medium">
+          <a href="#" class="text-teal-600 hover:text-teal-600">হোম</a>
+          <a href="#" class="hover:text-teal-600">গ্যালারি</a>
+          <a href="#" class="hover:text-teal-600">নোটিশ</a>
+          <a href="#" class="hover:text-teal-600">সুবিধা</a>
+
+          <div class="relative group">
+            <a href="#" class="hover:text-teal-600 inline-flex items-center">
+              শাখা
+              <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
+            </a>
+            <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">ঢাকা শাখা</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">চট্টগ্রাম শাখা</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">সিলেট শাখা</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <a href="#" class="hover:text-teal-600 inline-flex items-center">
+              একাডেমিক
+              <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
+            </a>
+            <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+            </div>
+          </div>
+
+          <a href="#" class="hover:text-teal-600">এডমিশন</a>
+
+          <a href="#" class="bg-teal-600 hover:bg-teal-700 text-white px-5 pt-[14px] py-[0.50rem] leading-[1.1] rounded-md transition inline-block ml-4"> প্রি-এডমিশন </a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menuToggle" class="text-gray-700 focus:outline-none">
+            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-white text-gray-700 font-medium">
+        <a href="#" class="block hover:text-teal-600">হোম</a>
+        <a href="#" class="block hover:text-teal-600">গ্যালারি</a>
+        <a href="#" class="block hover:text-teal-600">নোটিশ</a>
+        <a href="#" class="block hover:text-teal-600">সুবিধা</a>
+
+        <div class="relative group">
+          <a href="#" class="hover:text-teal-600 inline-flex items-center">
+            অন্যান্য পেইজ
+            <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
+          </a>
+          <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
+            <a href="404.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">৪০৪ পেইজ </a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">চট্টগ্রাম শাখা</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">সিলেট শাখা</a>
+          </div>
+        </div>
+
+        <div>
+          <button class="flex justify-between items-center w-full text-left hover:text-teal-600 py-2" id="mobileAcademicToggle">
+            একাডেমিক
+            <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" id="mobileAcademicArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="mobileAcademicSubmenu" class="hidden pl-4 space-y-2">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+          </div>
+        </div>
+
+        <a href="#" class="block hover:text-teal-600">এডমিশন</a>
+        <a href="#" class="block text-white bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-md w-fit">প্রি-এডমিশন</a>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section class="py-20 bg-gray-50 flex items-center justify-center">
+      <div class="container mx-auto px-4 text-center">
+        <div class="max-w-md mx-auto">
+          <div class="mb-6 flex justify-center">
+            <img src="assets/file-big.7e7ffc6f.svg" alt="" />
+          </div>
+          <h3 class="text-3xl font-semibold text-gray-800 mb-3">দুঃখিত!</h3>
+          <p class="text-lg text-gray-600 mb-8">আপনি যা খুঁজছেন, তা পাওয়া যায়নি।</p>
+          <a href="#" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white py-3 px-8 rounded-md transition duration-300 ease-in-out">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            হোমে ফিরে যান
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-20 overflow-hidden" style="background-color: #fff8f1">
+      <div class="absolute top-0 left-0 w-48 h-48 bg-no-repeat z-0" style="background-image: url('assets/hero-decor.820a5fb2.svg'); background-size: contain"></div>
+
+      <div class="absolute bottom-0 right-0 w-64 h-64 bg-no-repeat z-0 transform rotate-180" style="background-image: url('assets/bg_decoration.745558dd.svg'); background-size: contain"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center" style="color: #ff8c00">ফি চার্ট</h2>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#0D1C36] text-white py-16">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col items-start">
+          <img src="assets/madrasatus-sunnah-logo.svg" alt="Madrasatus Sunnah Logo" class="h-20 mb-6" />
+          <p class="text-base leading-relaxed mb-6">একটি অত্যাধুনিক, আন্তর্জাতিক শিক্ষা, দাওয়াহ ও পূর্ণত মানকোলাবানে নিবেদিত সংস্থা ও শান্তির পথে থেকে এনে একটি আদর্শ কল্যাণসমাজ সেবামূলক প্রতিষ্ঠান।</p>
+          <div class="flex items-center mb-3">
+            <i data-feather="mail" class="h-5 w-5 mr-2"></i>
+            <a href="mailto:info@madrasatussunnah.org" class="hover:text-white text-base">info@madrasatussunnah.org</a>
+          </div>
+          <div class="flex items-center mb-3">
+            <i data-feather="phone" class="h-5 w-5 mr-2"></i>
+            <a href="tel:+8809639151525" class="hover:text-white text-base">+880 9639 151525</a>
+          </div>
+          <div class="flex items-start">
+            <i data-feather="clock" class="h-5 w-5 mr-2"></i>
+            <p class="text-base">
+              যোগাযোগের সময়: রোববার - বৃহস্পতিবার, <br />
+              সকাল ৯টা - বিকাল ৫টা
+            </p>
+          </div>
+        </div>
+
+        <div class="text-left">
+          <h4 class="text-xl font-semibold text-white mb-6">গুরুত্বপূর্ণ লিংক</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-white text-base">আমাদের সম্পর্কে</a></li>
+            <li><a href="#" class="hover:text-white text-base">এডমিশন</a></li>
+            <li><a href="#" class="hover:text-white text-base">ক্যারিয়ার</a></li>
+            <li>
+              <a href="#" class="hover:text-white text-base inline-flex items-center">
+                ক্যাম্পাস
+                <span class="px-2 pt-1 pb-[0.12rem] rounded-[0.875rem] bg-teal-700 text-xs cursor-pointer ml-2">নিয়োগ দিচ্ছি</span>
+              </a>
+            </li>
+            <li><a href="#" class="hover:text-white text-base">হিফজুল কুরআন</a></li>
+          </ul>
+        </div>
+
+        <div class="text-left">
+          <h4 class="text-xl font-semibold text-white mb-6">সাবস্ক্রাইব করুন</h4>
+          <div class="flex items-center bg-white h-[3.75rem] rounded-[0.375rem] relative">
+            <span class="absolute left-5"><i data-feather="mail" class="h-5 w-5 text-gray-400"></i></span><input type="email" placeholder="ইমেল এড্রেস লিখুন" class="pl-12 py-2 text-[#54555F] outline-none w-full pr-5" /><button
+              class="bg-[#0F8180] hover:bg-[#0B6261] h-full px-[1.55rem] rounded-e-[0.375rem] font-inter text-sm font-semibold uppercase outline-none border-none">
+              Send
+            </button>
+          </div>
+          <p class="text-base leading-relaxed mb-4 mt-3">সাবস্ক্রাইব করার মাধ্যমে আপনি আমাদের প্রাইভেসি নীতির শর্ত পূরণ করবেন।</p>
+          <div class="flex">
+            <a href="#" class="bg-gray-700 hover:bg-teal-600 text-white p-3 rounded-full flex items-center justify-center transition">
+              <i data-feather="facebook" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-white py-8">
+        <div class="container mx-auto px-4 border-t border-gray-700 pt-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 py-4">
+            <div class="text-center md:text-center">
+              <h5 class="text-xl text-white mb-4">প্রধান শাখা</h5>
+              <p class="text-base leading-relaxed">
+                প্লট-১, ২, ৩; ব্লক-ডি, রোড-২/বি, সানতলী<br />
+                আফতাব, মডেল প্রোপার্টিস, সাতাকুল, বাড্ডা, ঢাকা।
+              </p>
+              <p class="text-base">
+                <a href="mailto:info@madrasatussunnah.org" class="hover:text-white">info@madrasatussunnah.org</a><br />
+                <a href="tel:01409979981" class="hover:text-white">01409-979981 (এডমিন)</a>
+              </p>
+            </div>
+
+            <div class="text-center md:text-center">
+              <h5 class="text-xl text-white mb-4">কুমিল্লা শাখা</h5>
+              <p class="text-base leading-relaxed">ছৌটালপুর (বজ্র স্টোর), দেবিদ্বার, কুমিল্লা।</p>
+              <p class="text-base">
+                <a href="mailto:info@madrasatussunnah.org" class="hover:text-white">info@madrasatussunnah.org</a><br />
+                <a href="tel:01409979957" class="hover:text-white">01409-979957 (অফিস)</a><br />
+                <a href="tel:01604758887" class="hover:text-white">01604-758887 (এডমিন)</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-base">
+            <p class="mb-4 md:mb-0">&copy; ২০২৫ মাদ্রাসাতুস সুন্নাহ - সর্ব স্বত্ত্ব সংরক্ষিত।</p>
+            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
+              <a href="#" class="hover:text-white">পরিষেবার শর্তাবলী</a>
+              <a href="#" class="hover:text-white">গোপনীয়তা নীতি</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
