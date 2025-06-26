@@ -10,7 +10,7 @@
     <!-- Font Family Tiro Bangla -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header class="bg-teal-700 text-white text-sm hidden md:block">
@@ -33,14 +33,14 @@
     </header>
 
     <!-- Main Nav -->
-    <nav class="bg-white shadow-sm">
+    <nav class="bg-white shadow-sm relative z-50">
       <div class="container mx-auto px-4 py-3 flex justify-between items-center">
         <div class="flex items-center gap-2">
           <img src="assets/madrasatus-sunnah-logo.svg" alt="Logo" class="h-[3.5rem] w-auto" />
         </div>
 
         <div class="hidden md:flex items-center gap-5 text-gray-700 font-medium">
-          <a href="#" class="text-teal-600 hover:text-teal-600">হোম</a>
+          <a href="index.html" class="text-teal-600 hover:text-teal-600">হোম</a>
           <a href="#" class="hover:text-teal-600">গ্যালারি</a>
           <a href="notice.html" class="hover:text-teal-600">নোটিশ</a>
           <a href="#" class="hover:text-teal-600">সুবিধা</a>
@@ -53,7 +53,7 @@
             <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <a href="404.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">৪০৪ পেইজ </a>
               <a href="notice_details.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">নোটিশ বিস্তারিত</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">সিলেট শাখা</a>
+              <a href="fee-chart.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">ফি চার্ট</a>
             </div>
           </div>
 
@@ -87,7 +87,7 @@
       </div>
 
       <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-white text-gray-700 font-medium">
-        <a href="#" class="block hover:text-teal-600">হোম</a>
+        <a href="index.html" class="block hover:text-teal-600">হোম</a>
         <a href="#" class="block hover:text-teal-600">গ্যালারি</a>
         <a href="notice.html" class="block hover:text-teal-600">নোটিশ</a>
         <a href="#" class="block hover:text-teal-600">সুবিধা</a>
@@ -102,7 +102,7 @@
           <div id="mobileShakhaSubmenu" class="hidden pl-4 space-y-2">
             <a href="404.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">৪০৪ পেইজ</a>
             <a href="notice_details.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">নোটিশ বিস্তারিত</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">সিলেট শাখা</a>
+            <a href="fee-chart.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ফি চার্ট</a>
           </div>
         </div>
 
@@ -183,26 +183,11 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-[#0D1C36] text-white py-16">
-      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer class="bg-[#0D1C36] text-white pt-16">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="flex flex-col items-start">
           <img src="assets/madrasatus-sunnah-logo.svg" alt="Madrasatus Sunnah Logo" class="h-20 mb-6" />
           <p class="text-base leading-relaxed mb-6">একটি অত্যাধুনিক, আন্তর্জাতিক শিক্ষা, দাওয়াহ ও পূর্ণত মানকোলাবানে নিবেদিত সংস্থা ও শান্তির পথে থেকে এনে একটি আদর্শ কল্যাণসমাজ সেবামূলক প্রতিষ্ঠান।</p>
-          <div class="flex items-center mb-3">
-            <i data-feather="mail" class="h-5 w-5 mr-2"></i>
-            <a href="mailto:info@madrasatussunnah.org" class="hover:text-white text-base">info@madrasatussunnah.org</a>
-          </div>
-          <div class="flex items-center mb-3">
-            <i data-feather="phone" class="h-5 w-5 mr-2"></i>
-            <a href="tel:+8809639151525" class="hover:text-white text-base">+880 9639 151525</a>
-          </div>
-          <div class="flex items-start">
-            <i data-feather="clock" class="h-5 w-5 mr-2"></i>
-            <p class="text-base">
-              যোগাযোগের সময়: রোববার - বৃহস্পতিবার, <br />
-              সকাল ৯টা - বিকাল ৫টা
-            </p>
-          </div>
         </div>
 
         <div class="text-left">
@@ -222,24 +207,27 @@
         </div>
 
         <div class="text-left">
-          <h4 class="text-xl font-semibold text-white mb-6">সাবস্ক্রাইব করুন</h4>
-          <div class="flex items-center bg-white h-[3.75rem] rounded-[0.375rem] relative">
-            <span class="absolute left-5"><i data-feather="mail" class="h-5 w-5 text-gray-400"></i></span><input type="email" placeholder="ইমেল এড্রেস লিখুন" class="pl-12 py-2 text-[#54555F] outline-none w-full pr-5" /><button
-              class="bg-[#0F8180] hover:bg-[#0B6261] h-full px-[1.55rem] rounded-e-[0.375rem] font-inter text-sm font-semibold uppercase outline-none border-none">
-              Send
-            </button>
-          </div>
-          <p class="text-base leading-relaxed mb-4 mt-3">সাবস্ক্রাইব করার মাধ্যমে আপনি আমাদের প্রাইভেসি নীতির শর্ত পূরণ করবেন।</p>
-          <div class="flex">
-            <a href="#" class="bg-gray-700 hover:bg-teal-600 text-white p-3 rounded-full flex items-center justify-center transition">
-              <i data-feather="facebook" class="h-5 w-5"></i>
-            </a>
+          <h4 class="text-xl font-semibold text-white mb-6">আমাদের ফেসবুক পেজ</h4>
+
+          <div class="rounded-lg overflow-hidden shadow-lg border border-gray-300">
+            <div class="aspect-w-16 aspect-h-9 md:aspect-h-16 lg:aspect-h-9 xl:aspect-h-7">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmadrasatussunnah.org&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="100%"
+                height="100%"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Madrassatus Sunnah Facebook Page"></iframe>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="text-white py-8">
-        <div class="container mx-auto px-4 border-t border-gray-700 pt-8">
+        <div class="max-w-6xl mx-auto px-4 border-t border-gray-700 pt-8">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 py-4">
             <div class="text-center md:text-center">
               <h5 class="text-xl text-white mb-4">প্রধান শাখা</h5>

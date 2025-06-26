@@ -1,28 +1,5 @@
 body {
-  font-family: 'Tiro Bangla', sans-serif;
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #a0aec0;
-}
-
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 #f1f1f1;
+  font-family: 'Noto Serif Bengali', sans-serif;
 }
 
 .tab-content {
