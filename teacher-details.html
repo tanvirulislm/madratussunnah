@@ -42,7 +42,7 @@
         </div>
 
         <div class="hidden md:flex items-center gap-5 text-gray-700 font-medium">
-          <a href="index.html" class="hover:text-teal-600">হোম</a>
+          <a href="index.html" class="text-teal-600 hover:text-teal-600">হোম</a>
           <a href="#" class="hover:text-teal-600">গ্যালারি</a>
           <a href="notice.html" class="hover:text-teal-600">নোটিশ</a>
           <a href="#" class="hover:text-teal-600">সুবিধা</a>
@@ -61,14 +61,14 @@
           </div>
 
           <div class="relative group">
-            <a href="#" class="text-teal-600 hover:text-teal-600 inline-flex items-center">
+            <a href="#" class="hover:text-teal-600 inline-flex items-center">
               একাডেমিক
               <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
             </a>
             <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
-              <a href="teachers.html" class="block px-4 py-2 text-teal-600 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+              <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
+              <a href="exam.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
             </div>
           </div>
 
@@ -119,8 +119,8 @@
           </button>
           <div id="mobileAcademicSubmenu" class="hidden pl-4 space-y-2">
             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
-            <a href="teachers.html" class="block px-4 py-2 text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+            <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
+            <a href="exam.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
           </div>
         </div>
 
@@ -198,6 +198,94 @@
               <li>সিনিয়র লেকচারার, জামিয়া ইমাম বুখারী, চট্টগ্রাম (২০১০-২০১৫)</li>
               <li>শিক্ষক, মাদ্রাসাতুল মদিনা, সিলেট (২০০৮-২০১০)</li>
             </ul>
+          </div>
+        </div>
+
+        <!-- Class Routine Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">সাপ্তাহিক ক্লাস রুটিন</h2>
+
+          <!-- Weekday Tabs -->
+          <div class="mb-6">
+            <div class="flex flex-wrap border-b border-gray-200">
+              <button class="px-4 py-2 font-medium text-teal-600 border-b-2 border-teal-600" data-day="saturday">শনিবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="sunday">রবিবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="monday">সোমবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="tuesday">মঙ্গলবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="wednesday">বুধবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="thursday">বৃহস্পতিবার</button>
+            </div>
+          </div>
+
+          <!-- Routine Table -->
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">সময়</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ক্লাস</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">বিভাগ</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">রুম নং</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200" id="routine-content">
+                <!-- Saturday Routine (Default) -->
+                <tr class="routine-day saturday">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">08:00 - 09:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফিকহুল ইসলাম</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">দাওরায়ে হাদিস (১ম বর্ষ)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৩০২</td>
+                </tr>
+                <tr class="routine-day saturday">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10:00 - 11:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">উসুলুল ফিকহ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ইফতা বিভাগ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৪১৫</td>
+                </tr>
+                <tr class="routine-day saturday">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">02:30 - 04:00</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফতোয়া ক্লাস</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ইফতা বিভাগ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৪১৫</td>
+                </tr>
+
+                <!-- Sunday Routine (Hidden by default) -->
+                <tr class="routine-day sunday hidden">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">08:00 - 09:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফিকহুল ইসলাম</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">দাওরায়ে হাদিস (২য় বর্ষ)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৩০৫</td>
+                </tr>
+                <tr class="routine-day sunday hidden">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">11:00 - 12:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">সমসাময়িক ফিকহ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ইফতা বিভাগ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৪১৫</td>
+                </tr>
+
+                <!-- Monday Routine (Hidden by default) -->
+                <tr class="routine-day monday hidden">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">09:00 - 10:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফিকহুল ইসলাম</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">দাওরায়ে হাদিস (১ম বর্ষ)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৩০২</td>
+                </tr>
+                <tr class="routine-day monday hidden">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">02:00 - 03:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফতোয়া গবেষণা</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ইফতা বিভাগ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৪১৫</td>
+                </tr>
+
+                <!-- Other days would follow the same pattern -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- No Class Notice -->
+          <div id="no-class-notice" class="hidden mt-4 p-4 bg-gray-50 rounded-lg text-center">
+            <i data-feather="calendar" class="h-6 w-6 mx-auto text-gray-400 mb-2"></i>
+            <p class="text-gray-500">এই দিনে কোনো ক্লাস নেই</p>
           </div>
         </div>
 

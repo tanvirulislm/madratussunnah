@@ -41,7 +41,7 @@ document.getElementById('mobileAcademicToggle').addEventListener('click', functi
           slidesPerView: 1,
           spaceBetween: 24,
           autoplay: {
-            delay: 1000,
+            delay: 1500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           },
@@ -65,3 +65,34 @@ document.getElementById('mobileAcademicToggle').addEventListener('click', functi
           },
         })
       })
+
+
+
+    // Teacher Class Routine
+          // Tab functionality for routine days
+          document.querySelectorAll('[data-day]').forEach(tab => {
+            tab.addEventListener('click', function () {
+              // Update active tab styling
+              document.querySelectorAll('[data-day]').forEach(t => {
+                t.classList.remove('text-teal-600', 'border-teal-600')
+                t.classList.add('text-gray-500', 'hover:text-teal-600')
+              })
+              this.classList.add('text-teal-600', 'border-teal-600')
+              this.classList.remove('text-gray-500', 'hover:text-teal-600')
+
+              // Show selected day's routine
+              const day = this.getAttribute('data-day')
+              document.querySelectorAll('.routine-day').forEach(row => {
+                row.classList.add('hidden')
+              })
+
+              const dayRows = document.querySelectorAll(`.routine-day.${day}`)
+              if (dayRows.length > 0) {
+                dayRows.forEach(row => row.classList.remove('hidden'))
+                document.getElementById('no-class-notice').classList.add('hidden')
+              } else {
+                document.getElementById('no-class-notice').classList.remove('hidden')
+              }
+            })
+          })
+      

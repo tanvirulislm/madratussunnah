@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
-    <header class="bg-teal-700 text-white text-sm hidden md:block">
+    <!-- <header class="bg-teal-700 text-white text-sm hidden md:block">
       <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
         <div class="container mx-auto flex justify-center items-center space-x-[1.5rem]">
           <div class="flex items-center gap-2">
@@ -34,7 +34,37 @@
           </div>
         </div>
       </div>
+    </header> -->
+
+    <header class="bg-teal-700 text-white text-sm hidden md:block overflow-hidden">
+      <div class="container mx-auto px-4 py-3 relative">
+        <div class="flex items-center gap-3">
+          <i data-feather="bell" class="h-4 w-4 shrink-0"></i>
+          <div class="overflow-hidden w-full">
+            <div class="animate-marquee whitespace-nowrap flex gap-12">
+              <span>📢 রমজানের ছুটির নোটিশ প্রকাশিত হয়েছে।</span>
+              <span>📢 নতুন শিক্ষাবর্ষে ভর্তি কার্যক্রম শুরু হয়েছে।</span>
+              <span>📢 আগামি শুক্রবার বিশেষ আলোচনা অনুষ্ঠিত হবে।</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
+
+    <style>
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .animate-marquee {
+        animation: marquee 100s linear infinite;
+      }
+    </style>
 
     <!-- Main Nav -->
     <nav class="bg-white shadow-sm relative z-50">
@@ -47,7 +77,7 @@
           <a href="index.html" class="text-teal-600 hover:text-teal-600">হোম</a>
           <a href="#" class="hover:text-teal-600">গ্যালারি</a>
           <a href="notice.html" class="hover:text-teal-600">নোটিশ</a>
-          <a href="#" class="hover:text-teal-600">সুবিধা</a>
+          <a href="facilities.html" class="hover:text-teal-600">সুবিধা</a>
 
           <div class="relative group">
             <a href="#" class="hover:text-teal-600 inline-flex items-center">
@@ -68,9 +98,9 @@
               <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
             </a>
             <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+              <a href="curriculum.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
               <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+              <a href="exam.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
             </div>
           </div>
 
@@ -95,7 +125,7 @@
         <a href="index.html" class="block hover:text-teal-600">হোম</a>
         <a href="#" class="block hover:text-teal-600">গ্যালারি</a>
         <a href="notice.html" class="block hover:text-teal-600">নোটিশ</a>
-        <a href="#" class="block hover:text-teal-600">সুবিধা</a>
+        <a href="facilities.html" class="block hover:text-teal-600">সুবিধা</a>
 
         <div>
           <button class="flex justify-between items-center w-full text-left hover:text-teal-600 py-2" id="mobileShakhaToggle">
@@ -120,9 +150,9 @@
             </svg>
           </button>
           <div id="mobileAcademicSubmenu" class="hidden pl-4 space-y-2">
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+            <a href="curriculum.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
             <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+            <a href="exam.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
           </div>
         </div>
 
@@ -190,6 +220,42 @@
           ও দক্ষ আলেম তৈরিতে সফল হলেও এর দ্বারা সময়োপযোগী ও সৃজনশীল মানুষ সেভাবে তৈরি হচ্ছে না। পক্ষান্তরে প্রচলিত সাধারণ শিক্ষাধারা আমাদের সন্তানদের পার্থিব শিক্ষায় শিক্ষিত করছে বটে, কিন্তু এই মাধ্যমে নৈতিকতা এবং প্রকৃত জীবনবোধসম্পন্ন মানুষ গড়ে উঠছে না। এজন্য আমরা মনে করছি এরকম একটি
           শিক্ষাপ্রতিষ্ঠান দরকার যেটি উন্নত চরিত্রসমৃদ্ধ কুরআন—সুন্নাহর গভীর জ্ঞানসম্পন্ন আলেম তৈরি করবে, যারা জাগতিক জ্ঞান—বিজ্ঞানেও প্রয়োজনীয় ধারণা রাখবে। এই লক্ষ্য বাস্তবায়নেই মাদরাসাতুস সুন্নাহর অভিযাত্রা।
         </p>
+      </div>
+    </section>
+
+    <section class="bg-[#F0FDF4] py-16 md:py-24 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+        <!-- Left: Image -->
+        <div class="relative">
+          <img src="https://madrasatussunnah.org/_next/image?url=https%3A%2F%2Fcdn.madrasatussunnah.org%2Fgallery%2F0005.webp&w=828&q=75" alt="Madrasah Campus" class="rounded-xl shadow-lg w-full max-h-[400px] object-cover" />
+          <div class="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow text-sm text-teal-800 font-semibold">প্রতিষ্ঠিত: ২০১৫ সাল</div>
+        </div>
+
+        <!-- Right: Content -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-teal-800 mb-4 leading-snug">মাদ্রাসাতুস সুন্নাহ – একটি দ্বীনি শিক্ষার কেন্দ্র</h2>
+          <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
+            মাদ্রাসাতুস সুন্নাহ একটি নির্ভরযোগ্য ইসলামী শিক্ষা প্রতিষ্ঠান, যেখানে আধুনিক ও দ্বীনি শিক্ষার সমন্বয়ে একটি আদর্শ শিক্ষাব্যবস্থা গড়ে তোলা হয়েছে। হিফজ, কিরাত, হাদীস ও ফিকহের পাশাপাশি নৈতিক উন্নয়ন ও চারিত্রিক গঠনে বিশেষ গুরুত্ব দেওয়া হয়।
+          </p>
+          <ul class="text-gray-600 space-y-2">
+            <li class="flex items-center gap-2">
+              <i data-feather="check-circle" class="h-5 w-5 text-teal-600"></i>
+              অভিজ্ঞ ও যোগ্য মুআল্লিমগণ দ্বারা পাঠদান
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-feather="check-circle" class="h-5 w-5 text-teal-600"></i>
+              হিফজ ও আরবি ভাষা শিক্ষায় বিশেষ কোর্স
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-feather="check-circle" class="h-5 w-5 text-teal-600"></i>
+              আবাসিক ও অনাবাসিক শিক্ষার্থীদের জন্য আলাদা ব্যবস্থা
+            </li>
+          </ul>
+          <!-- Button -->
+          <div class="mt-6">
+            <button class="text-white bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-md">আরো দেখুন</button>
+          </div>
+        </div>
       </div>
     </section>
 
