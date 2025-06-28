@@ -41,7 +41,7 @@ document.getElementById('mobileAcademicToggle').addEventListener('click', functi
           slidesPerView: 1,
           spaceBetween: 24,
           autoplay: {
-            delay: 1500,
+            delay: 2500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           },
