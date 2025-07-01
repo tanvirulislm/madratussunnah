@@ -15,28 +15,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="bg-teal-700 text-white text-sm hidden md:block">
-      <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
-        <div class="container mx-auto flex justify-center items-center space-x-[1.5rem]">
-          <div class="flex items-center gap-2">
-            <i data-feather="mail" class="h-4 w-4"></i>
-            <span class="flex items-center gap-1"> info@madrasatussunnah.org </span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i data-feather="phone" class="h-4 w-4"></i>
-            <span class="flex items-center gap-1"> +880 9639 151525 </span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i data-feather="map-pin" class="h-4 w-4"></i>
-            <span class="flex items-center gap-1"> স্থায়ী কার্যালয়: মাদরাসাতুস সুন্নাহ, সাতারকুল, বাড্ডা, ঢাকা। </span>
+    <header class="bg-teal-700 text-white text-sm hidden md:block overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 py-3 relative">
+        <div class="flex items-center gap-3">
+          <i data-feather="bell" class="h-4 w-4 shrink-0"></i>
+          <div class="overflow-hidden w-full">
+            <div class="animate-marquee whitespace-nowrap flex gap-12">
+              <a href="notice_details.html" class="hover:underline">
+                <span>📢 রমজানের ছুটির নোটিশ প্রকাশিত হয়েছে।</span>
+                <span>📢 নতুন শিক্ষাবর্ষে ভর্তি কার্যক্রম শুরু হয়েছে।</span>
+                <span>📢 আগামি শুক্রবার বিশেষ আলোচনা অনুষ্ঠিত হবে।</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
+    <style>
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .animate-marquee {
+        animation: marquee 100s linear infinite;
+      }
+    </style>
+
     <!-- Main Nav -->
     <nav class="bg-white shadow-sm relative z-50">
-      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <div class="flex items-center gap-2">
           <img src="assets/madrasatus-sunnah-logo.svg" alt="Logo" class="h-[3.5rem] w-auto" />
         </div>
@@ -45,7 +58,7 @@
           <a href="index.html" class="text-teal-600 hover:text-teal-600">হোম</a>
           <a href="#" class="hover:text-teal-600">গ্যালারি</a>
           <a href="notice.html" class="hover:text-teal-600">নোটিশ</a>
-          <a href="#" class="hover:text-teal-600">সুবিধা</a>
+          <a href="facilities.html" class="hover:text-teal-600">সুবিধা</a>
 
           <div class="relative group">
             <a href="#" class="hover:text-teal-600 inline-flex items-center">
@@ -66,7 +79,7 @@
               <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
             </a>
             <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
-              <a href="#" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+              <a href="curriculum.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
               <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
               <a href="exam.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
             </div>
@@ -93,7 +106,7 @@
         <a href="index.html" class="block hover:text-teal-600">হোম</a>
         <a href="#" class="block hover:text-teal-600">গ্যালারি</a>
         <a href="notice.html" class="block hover:text-teal-600">নোটিশ</a>
-        <a href="#" class="block hover:text-teal-600">সুবিধা</a>
+        <a href="facilities.html" class="block hover:text-teal-600">সুবিধা</a>
 
         <div>
           <button class="flex justify-between items-center w-full text-left hover:text-teal-600 py-2" id="mobileShakhaToggle">
@@ -118,7 +131,7 @@
             </svg>
           </button>
           <div id="mobileAcademicSubmenu" class="hidden pl-4 space-y-2">
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+            <a href="curriculum.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
             <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
             <a href="exam.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
           </div>
