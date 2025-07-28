@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://hikmatech.com/image/logo/favicon.png" />
+    <link rel="shortcut icon" href="https://hikmatech.com/image/logo/favicon.png" type="image/x-icon" />
+    <title>Madrasatus Sunnah</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="customcss.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Font Family Tiro Bangla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-teal-700 text-white text-md overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 py-3 relative">
+        <div class="flex items-center gap-3">
+          <i data-feather="bell" class="h-4 w-4 shrink-0"></i>
+          <div class="overflow-hidden w-full">
+            <div class="animate-marquee whitespace-nowrap flex gap-12">
+              <a href="notice_details.html" class="hover:underline">
+                <span>📢 রমজানের ছুটির নোটিশ প্রকাশিত হয়েছে।</span>
+                <span>📢 নতুন শিক্ষাবর্ষে ভর্তি কার্যক্রম শুরু হয়েছে।</span>
+                <span>📢 আগামি শুক্রবার বিশেষ আলোচনা অনুষ্ঠিত হবে।</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <style>
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .animate-marquee {
+        animation: marquee 100s linear infinite;
+      }
+    </style>
+
+    <!-- Main Nav -->
+    <nav class="bg-white shadow-sm relative z-50">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <img src="assets/madrasatus-sunnah-logo.svg" alt="Logo" class="h-[3.5rem] w-auto" />
+        </div>
+
+        <div class="hidden md:flex items-center gap-5 text-gray-700 font-medium">
+          <a href="index.html" class="text-teal-600 hover:text-teal-600">হোম</a>
+          <a href="#" class="hover:text-teal-600">গ্যালারি</a>
+          <a href="notice.html" class="hover:text-teal-600">নোটিশ</a>
+          <a href="facilities.html" class="hover:text-teal-600">সুবিধা</a>
+
+          <div class="relative group">
+            <a href="#" class="hover:text-teal-600 inline-flex items-center">
+              অন্যান্য পেইজ
+              <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
+            </a>
+            <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <a href="404.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">৪০৪ পেইজ </a>
+              <a href="notice_details.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">নোটিশ বিস্তারিত</a>
+              <a href="fee-chart.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">ফি চার্ট</a>
+              <a href="faq.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">প্রশ্ন ও উত্তর</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <a href="#" class="hover:text-teal-600 inline-flex items-center">
+              একাডেমিক
+              <i data-feather="chevron-down" class="ml-1 h-4 w-4"></i>
+            </a>
+            <div class="absolute left-0 mt-2 p-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <a href="curriculum.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+              <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
+              <a href="exam.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+            </div>
+          </div>
+
+          <a href="admission.html" class="hover:text-teal-600">এডমিশন</a>
+
+          <a href="#" class="bg-teal-600 hover:bg-teal-700 text-white px-5 pt-[14px] py-[0.50rem] leading-[1.1] rounded-md transition inline-block ml-4"> প্রি-এডমিশন </a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menuToggle" class="text-gray-700 focus:outline-none">
+            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-white text-gray-700 font-medium">
+        <a href="index.html" class="block hover:text-teal-600">হোম</a>
+        <a href="#" class="block hover:text-teal-600">গ্যালারি</a>
+        <a href="notice.html" class="block hover:text-teal-600">নোটিশ</a>
+        <a href="facilities.html" class="block hover:text-teal-600">সুবিধা</a>
+
+        <div>
+          <button class="flex justify-between items-center w-full text-left hover:text-teal-600 py-2" id="mobileShakhaToggle">
+            অন্যান্য পেইজ
+            <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" id="mobileShakhaArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="mobileShakhaSubmenu" class="hidden pl-4 space-y-2">
+            <a href="404.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">৪০৪ পেইজ</a>
+            <a href="notice_details.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">নোটিশ বিস্তারিত</a>
+            <a href="fee-chart.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ফি চার্ট</a>
+            <a href="faq.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">প্রশ্ন উত্তর</a>
+          </div>
+        </div>
+
+        <div>
+          <button class="flex justify-between items-center w-full text-left hover:text-teal-600 py-2" id="mobileAcademicToggle">
+            একাডেমিক
+            <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" id="mobileAcademicArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="mobileAcademicSubmenu" class="hidden pl-4 space-y-2">
+            <a href="curriculum.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষাক্রম</a>
+            <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">শিক্ষকবৃন্দ</a>
+            <a href="exam.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">পরীক্ষা</a>
+          </div>
+        </div>
+
+        <a href="admission.html" class="block hover:text-teal-600">এডমিশন</a>
+        <a href="#" class="block text-white bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-md w-fit">প্রি-এডমিশন</a>
+      </div>
+    </nav>
+
+    <!-- Teacher Details Main Section -->
+    <section class="py-12 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4">
+        <!-- Teacher Header -->
+        <div class="flex flex-col md:flex-row gap-8 bg-white rounded-lg shadow-md p-6 mb-8">
+          <div class="w-full md:w-1/3">
+            <img src="https://media.istockphoto.com/id/492789232/photo/content-young-arab-man-in-traditional-clothing.jpg?s=612x612&w=0&k=20&c=BmsD-FMVfZPqj5jndy3L_jOo6S-sTIZhsH2LCJmc7To=" alt="মুফতি আব্দুর রহমান" class="w-full h-auto rounded-lg object-cover shadow-md" />
+          </div>
+          <div class="w-full md:w-2/3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h1 class="text-3xl font-bold text-gray-800">মুফতি আব্দুর রহমান</h1>
+                <p class="text-xl text-teal-600 mb-2">ফিকহ বিভাগ প্রধান</p>
+              </div>
+              <span class="bg-teal-100 text-teal-800 text-sm font-semibold px-3 py-1 rounded-full">ফিকহ বিভাগ</span>
+            </div>
+
+            <div class="mt-4 flex flex-wrap gap-4">
+              <div class="flex items-center text-gray-600">
+                <i data-feather="award" class="h-5 w-5 mr-2 text-teal-600"></i>
+                <span>ইফতা, দারুল উলুম দেওবন্দ</span>
+              </div>
+              <div class="flex items-center text-gray-600">
+                <i data-feather="clock" class="h-5 w-5 mr-2 text-teal-600"></i>
+                <span>১২ বছর শিক্ষকতা অভিজ্ঞতা</span>
+              </div>
+              <div class="flex items-center text-gray-600">
+                <i data-feather="book" class="h-5 w-5 mr-2 text-teal-600"></i>
+                <span>১৫টি প্রকাশিত বই</span>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">যোগাযোগ</h3>
+              <div class="flex flex-wrap gap-4">
+                <a href="mailto:mufti.rahman@example.com" class="flex items-center text-gray-600 hover:text-teal-600">
+                  <i data-feather="mail" class="h-5 w-5 mr-2"></i>
+                  mufti.rahman@example.com
+                </a>
+                <a href="tel:+880123456789" class="flex items-center text-gray-600 hover:text-teal-600">
+                  <i data-feather="phone" class="h-5 w-5 mr-2"></i>
+                  +880 1234 56789
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teacher Bio -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">জীবনবৃত্তান্ত</h2>
+          <div class="prose max-w-none text-gray-700">
+            <p>মুফতি আব্দুর রহমান ইসলামিক জুরিসপ্রুডেন্সে বিশেষজ্ঞ। তিনি দারুল উলুম দেওবন্দ থেকে ইফতা সম্পন্ন করেছেন এবং সমসাময়িক ফিকহি সমস্যার সমাধানে বিশেষ পারদর্শী। তার ১২ বছরের শিক্ষকতা অভিজ্ঞতা রয়েছে বাংলাদেশ ও ভারতের বিভিন্ন মাদ্রাসায়।</p>
+
+            <p class="mt-4">তিনি ফিকহের বিভিন্ন বিষয়ে ১৫টিরও বেশি বই রচনা করেছেন যা দেশের বিভিন্ন মাদ্রাসায় পাঠ্য হিসেবে ব্যবহৃত হয়। তার রচিত "আসান ফিকহ" বইটি বিশেষভাবে সমাদৃত।</p>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-6">শিক্ষাগত যোগ্যতা</h3>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>ইফতা (ফতোয়া বিশেষজ্ঞ), দারুল উলুম দেওবন্দ, ভারত (২০০৮)</li>
+              <li>মাস্টার্স ইন ইসলামিক স্টাডিজ, ইসলামিক ইউনিভার্সিটি, ঢাকা (২০০৫)</li>
+              <li>দাওরায়ে হাদিস, জামিয়া রাহমানিয়া আরাবিয়া, ঢাকা (২০০৩)</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-6">পেশাগত অভিজ্ঞতা</h3>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>ফিকহ বিভাগ প্রধান, মাদ্রাসাতুস সুন্নাহ (২০১৫-বর্তমান)</li>
+              <li>সিনিয়র লেকচারার, জামিয়া ইমাম বুখারী, চট্টগ্রাম (২০১০-২০১৫)</li>
+              <li>শিক্ষক, মাদ্রাসাতুল মদিনা, সিলেট (২০০৮-২০১০)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Class Routine Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">সাপ্তাহিক ক্লাস রুটিন</h2>
+
+          <!-- Weekday Tabs -->
+          <div class="mb-6">
+            <div class="flex flex-wrap border-b border-gray-200">
+              <button class="px-4 py-2 font-medium text-teal-600 border-b-2 border-teal-600" data-day="saturday">শনিবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="sunday">রবিবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="monday">সোমবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="tuesday">মঙ্গলবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="wednesday">বুধবার</button>
+              <button class="px-4 py-2 font-medium text-gray-500 hover:text-teal-600" data-day="thursday">বৃহস্পতিবার</button>
+            </div>
+          </div>
+
+          <!-- Routine Table -->
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">সময়</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ক্লাস</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">বিভাগ</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">রুম নং</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200" id="routine-content">
+                <!-- Saturday Routine (Default) -->
+                <tr class="routine-day saturday">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">08:00 - 09:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফিকহুল ইসলাম</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">দাওরায়ে হাদিস (১ম বর্ষ)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৩০২</td>
+                </tr>
+                <tr class="routine-day saturday">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10:00 - 11:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">উসুলুল ফিকহ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ইফতা বিভাগ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৪১৫</td>
+                </tr>
+                <tr class="routine-day saturday">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">02:30 - 04:00</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফতোয়া ক্লাস</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ইফতা বিভাগ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৪১৫</td>
+                </tr>
+
+                <!-- Sunday Routine (Hidden by default) -->
+                <tr class="routine-day sunday hidden">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">08:00 - 09:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফিকহুল ইসলাম</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">দাওরায়ে হাদিস (২য় বর্ষ)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৩০৫</td>
+                </tr>
+                <tr class="routine-day sunday hidden">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">11:00 - 12:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">সমসাময়িক ফিকহ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ইফতা বিভাগ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৪১৫</td>
+                </tr>
+
+                <!-- Monday Routine (Hidden by default) -->
+                <tr class="routine-day monday hidden">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">09:00 - 10:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফিকহুল ইসলাম</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">দাওরায়ে হাদিস (১ম বর্ষ)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৩০২</td>
+                </tr>
+                <tr class="routine-day monday hidden">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">02:00 - 03:30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ফতোয়া গবেষণা</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ইফতা বিভাগ</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">৪১৫</td>
+                </tr>
+
+                <!-- Other days would follow the same pattern -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- No Class Notice -->
+          <div id="no-class-notice" class="hidden mt-4 p-4 bg-gray-50 rounded-lg text-center">
+            <i data-feather="calendar" class="h-6 w-6 mx-auto text-gray-400 mb-2"></i>
+            <p class="text-gray-500">এই দিনে কোনো ক্লাস নেই</p>
+          </div>
+        </div>
+
+        <!-- Published Works -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">প্রকাশিত গ্রন্থাবলী</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="border-l-4 border-teal-500 pl-4 py-2">
+              <h3 class="font-semibold text-gray-800">আসান ফিকহ</h3>
+              <p class="text-sm text-gray-600">ফিকহের মৌলিক বিষয়াবলী সহজ ভাষায় ব্যাখ্যা</p>
+            </div>
+            <div class="border-l-4 border-teal-500 pl-4 py-2">
+              <h3 class="font-semibold text-gray-800">সমসাময়িক ফতোয়া</h3>
+              <p class="text-sm text-gray-600">আধুনিক সময়ের বিভিন্ন সমস্যার ফিকহি সমাধান</p>
+            </div>
+            <div class="border-l-4 border-teal-500 pl-4 py-2">
+              <h3 class="font-semibold text-gray-800">নামাজের সহজ নিয়ম</h3>
+              <p class="text-sm text-gray-600">প্রাত্যহিক নামাজ সম্পর্কে বিস্তারিত নির্দেশিকা</p>
+            </div>
+            <div class="border-l-4 border-teal-500 pl-4 py-2">
+              <h3 class="font-semibold text-gray-800">যাকাত ক্যালকুলেটর</h3>
+              <p class="text-sm text-gray-600">যাকাত গণনার সহজ পদ্ধতি ও সমসাময়িক প্রশ্নোত্তর</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Teachers -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">একই বিভাগের অন্যান্য শিক্ষক</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Teacher 1 -->
+            <a href="teacher-details.html" class="group flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition">
+              <img src="https://media.istockphoto.com/id/492789232/photo/content-young-arab-man-in-traditional-clothing.jpg?s=612x612&w=0&k=20&c=BmsD-FMVfZPqj5jndy3L_jOo6S-sTIZhsH2LCJmc7To=" alt="মাওলানা ইব্রাহীম" class="w-16 h-16 rounded-full object-cover" />
+              <div>
+                <h3 class="font-medium text-gray-800 group-hover:text-teal-600">মাওলানা ইব্রাহীম</h3>
+                <p class="text-sm text-gray-600">ফিকহ বিভাগ</p>
+              </div>
+            </a>
+
+            <!-- Teacher 2 -->
+            <a href="teacher-details.html" class="group flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition">
+              <img src="https://media.istockphoto.com/id/953443444/photo/muslim-man-smiling.jpg?s=612x612&w=0&k=20&c=uUehguxOCz0C6yxonvIGcyGiNjXP--xN40tXtSjzmxo=" alt="মুফতি আব্দুল্লাহ" class="w-16 h-16 rounded-full object-cover" />
+              <div>
+                <h3 class="font-medium text-gray-800 group-hover:text-teal-600">মুফতি আব্দুল্লাহ</h3>
+                <p class="text-sm text-gray-600">ফিকহ বিভাগ</p>
+              </div>
+            </a>
+
+            <!-- Teacher 3 -->
+            <a href="teacher-details.html" class="group flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition">
+              <img src="https://media.istockphoto.com/id/464565934/photo/smiling-south-asian-bearded-male.jpg?s=612x612&w=0&k=20&c=uKyudyjQOAiqccBZ73UTgC944AA26iY1Z4VADwKmNH0=" alt="মাওলানা ইউসুফ" class="w-16 h-16 rounded-full object-cover" />
+              <div>
+                <h3 class="font-medium text-gray-800 group-hover:text-teal-600">মাওলানা ইউসুফ</h3>
+                <p class="text-sm text-gray-600">ফিকহ বিভাগ</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#0D1C36] text-white pt-16">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col items-start">
+          <img src="assets/madrasatus-sunnah-logo.svg" alt="Madrasatus Sunnah Logo" class="h-20 mb-6" />
+          <p class="text-base leading-relaxed mb-6">একটি অত্যাধুনিক, আন্তর্জাতিক শিক্ষা, দাওয়াহ ও পূর্ণত মানকোলাবানে নিবেদিত সংস্থা ও শান্তির পথে থেকে এনে একটি আদর্শ কল্যাণসমাজ সেবামূলক প্রতিষ্ঠান।</p>
+        </div>
+
+        <div class="text-left">
+          <h4 class="text-xl font-semibold text-white mb-6">গুরুত্বপূর্ণ লিংক</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-white text-base">আমাদের সম্পর্কে</a></li>
+            <li><a href="#" class="hover:text-white text-base">এডমিশন</a></li>
+            <li><a href="#" class="hover:text-white text-base">ক্যারিয়ার</a></li>
+            <li>
+              <a href="#" class="hover:text-white text-base inline-flex items-center">
+                ক্যাম্পাস
+                <span class="px-2 pt-1 pb-[0.12rem] rounded-[0.875rem] bg-teal-700 text-xs cursor-pointer ml-2">নিয়োগ দিচ্ছি</span>
+              </a>
+            </li>
+            <li><a href="#" class="hover:text-white text-base">হিফজুল কুরআন</a></li>
+          </ul>
+        </div>
+
+        <div class="text-left">
+          <h4 class="text-xl font-semibold text-white mb-6">আমাদের ফেসবুক পেজ</h4>
+
+          <div class="rounded-lg overflow-hidden shadow-lg border border-gray-300">
+            <div class="aspect-w-16 aspect-h-9 md:aspect-h-16 lg:aspect-h-9 xl:aspect-h-7">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmadrasatussunnah.org&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="100%"
+                height="100%"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Madrassatus Sunnah Facebook Page"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 border-t border-gray-700 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center text-base">
+            <p class="mb-4 md:mb-0">&copy; ২০২৫ মাদ্রাসাতুস সুন্নাহ - সর্ব স্বত্ত্ব সংরক্ষিত।</p>
+            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
+              <a href="#" class="hover:text-white">পরিষেবার শর্তাবলী</a>
+              <a href="#" class="hover:text-white">গোপনীয়তা নীতি</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
